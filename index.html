@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREAK CIRCUS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="site">
+
+    <div class="top-bar">
+      <span>FREAK CIRCUS // SYSTEM ONLINE</span>
+      <span>STATUS: UNKNOWN</span>
+    </div>
+
+    <!-- HOME -->
+    <main id="home">
+
+      <p class="warning">⚠ WARNING: UNAUTHORIZED VISITORS ⚠</p>
+
+      <h1>FREAK<br><span>CIRCUS</span></h1>
+
+      <p class="subtitle">THE SHOW NEVER ENDS.</p>
+
+      <div class="divider"></div>
+
+      <button onclick="enterCircus()">
+        ENTER THE CIRCUS
+      </button>
+
+    </main>
+
+    <!-- CIRCUS GROUNDS -->
+    <main id="grounds" class="hidden">
+
+      <p class="warning">[ CONNECTION ESTABLISHED ]</p>
+
+      <h2>THE CIRCUS GROUNDS</h2>
+
+      <p>Choose your destination.</p>
+
+      <div class="menu">
+
+        <button onclick="openSection('tents')">
+          🎪 TENTS
+        </button>
+
+        <button onclick="openSection('characters')">
+          👁 CHARACTERS
+        </button>
+
+        <button onclick="openSection('rules')">
+          ⚠ RULES
+        </button>
+
+        <button onclick="openSection('secret')">
+          ???
+        </button>
+
+      </div>
+
+    </main>
+
+    <!-- INFORMATION PAGE -->
+    <main id="section" class="hidden">
+
+      <p class="warning">[ FILE ACCESSED ]</p>
+
+      <h2 id="sectionTitle"></h2>
+
+      <div id="sectionContent"></div>
+
+      <button onclick="goBack()">← RETURN</button>
+
+    </main>
+
+    <footer>
+      <span>© FREAK CIRCUS</span>
+      <span>DO NOT TRUST THE SYSTEM</span>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
