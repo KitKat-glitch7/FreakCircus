@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #030303;
+  color: white;
+  font-family: monospace;
+}
+
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar,
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 1px solid #222;
+  color: #00ffff;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+main {
+  flex: 1;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.warning {
+  color: #ff003c;
+  letter-spacing: 4px;
+  animation: flicker 1s infinite;
+}
+
+h1 {
+  margin: 20px 0 10px;
+  font-size: clamp(70px, 12vw, 110px);
+  line-height: .8;
+  letter-spacing: 15px;
+  color: #ff003c;
+
+  text-shadow:
+    6px 0 #00ffff,
+    -6px 0 #ff003c,
+    0 0 35px #ff003c;
+}
+
+h1 span {
+  color: #00ffff;
+
+  text-shadow:
+    6px 0 #ff003c,
+    -6px 0 #00ffff,
+    0 0 35px #00ffff;
+}
+
+h2 {
+  color: #ff003c;
+  font-size: 55px;
+  letter-spacing: 8px;
+
+  text-shadow:
+    4px 0 #00ffff,
+    0 0 25px #ff003c;
+}
+
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 8px;
+  color: #ddd;
+}
+
+.divider {
+  width: 500px;
+  max-width: 80%;
+  height: 1px;
+  background: #ff003c;
+  box-shadow: 0 0 15px #ff003c;
+  margin: 30px;
+}
+
+button {
+  background: #050505;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  padding: 18px 30px;
+  margin: 8px;
+  font-family: monospace;
+  font-size: 16px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 30px #00ffff;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.menu button {
+  min-width: 220px;
+}
+
+#sectionContent {
+  max-width: 650px;
+  padding: 25px;
+  margin: 20px;
+  border: 1px solid #ff003c;
+  box-shadow: 0 0 15px #ff003c;
+  line-height: 1.8;
+}
+
+footer {
+  border-top: 1px solid #222;
+  border-bottom: none;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 63%, 64%, 65%, 100% {
+    opacity: 1;
+  }
+
+  20%, 62% {
+    opacity: .3;
+  }
+}
